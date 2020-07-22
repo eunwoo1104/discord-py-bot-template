@@ -66,7 +66,7 @@ async def change_presence():
     바뀌는 시간은 sleep_time 변수 변경으로 가능합니다.
     추천되는 설정은 15초입니다.
     """
-    sleep_time = 5
+    sleep_time = 15
     await bot.wait_for("ready")
     while True:
         if len(get_bot_settings()["presence"]) == 1:
