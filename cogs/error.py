@@ -31,7 +31,7 @@ class Error(commands.Cog):
             embed.add_field(name="MissingPermissions", value="Aㅓ... 합필이면... 잘 알아두세요. 당신은 이 명령어를 실행할 권한이 읎어요.\n"
                                                              f"필요한 권한: `{', '.join(error.missing_perms)}`")
         elif isinstance(error, commands.CheckFailure):
-            embed.add_field(name="CheckFailure", value="이 서버에서는 해당 명령어를 사용할 수 없도록 설정되어있습니다.")
+            embed.add_field(name="CheckFailure", value="당신은 이 명령어를 사용할 수 없습니다.")
         elif isinstance(error, commands.CommandOnCooldown):
             embed.add_field(name="CommandOnCooldown", value='쿨다운이 아직 {:.2f}초 남았습니다.'.format(error.retry_after))
         elif isinstance(error, commands.MissingRequiredArgument):
