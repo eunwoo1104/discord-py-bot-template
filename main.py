@@ -182,8 +182,7 @@ async def _cog_panel(ctx):
 
 
 # Cog를 불러오는 스크립트
-for fn in [f"cogs.{x.replace('.py', '')}" for x in os.listdir("./cogs") if x.endswith('.py')]:
-    bot.load_extension(fn)
+[bot.load_extension(f"cogs.{x.replace('.py', '')}") for x in os.listdir("./cogs") if x.endswith('.py')]
 
 # 봇 상태 메시지를 변경하는 코드 준비
 loop.create_task(change_presence())
